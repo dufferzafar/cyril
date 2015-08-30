@@ -14,7 +14,11 @@ tag_re = re.compile(r'<(\w+).*>')
 
 # TODO: unittests for extract/exclude etc.
 def extract(source, beg, end):
-    """ Return everything in between beg and end. """
+    """
+    Return everything in between beg and end.
+
+    http://git.io/vGCZV
+    """
     try:
         beg = source.index(beg) + len(beg)
         end = source.index(end, beg)
@@ -24,7 +28,11 @@ def extract(source, beg, end):
 
 
 def exclude(source, beg, end):
-    """ Return everything except what's in between beg and end. """
+    """
+    Return everything except what's in between beg and end.
+
+    http://git.io/vGCZi
+    """
     try:
         beg_ = source.index(beg)
         end = source.index(end, beg_ + len(beg)) + len(end)
@@ -43,7 +51,12 @@ def extract_url(source, url):
 
 
 def apply_rule(func, source, rule):
-    """ Apply extract/exclude on a rule. """
+    """
+    Apply extract/exclude on a rule.
+
+    http://git.io/vGCZT
+    http://git.io/vGCZI
+    """
     if 'tag' in rule:
         match = re.search(tag_re, source)
         if not match:
@@ -75,6 +88,7 @@ def fetch(provider, tags):
         return None
 
     # TODO: Handle file encoding - provider.charset
+    # http://git.io/vGCZ0
     html = resp.text
 
     if not html:
@@ -89,6 +103,7 @@ def fetch(provider, tags):
     lyrics = html
 
     # Apply rules on the html
+    # http://git.io/vGCZG
     for extract_rule in provider.extract_rules:
 
         lyrics = apply_rule(extract, lyrics, extract_rule)

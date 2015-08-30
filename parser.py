@@ -13,10 +13,13 @@ def parse_xml(xml):
 
     tree = ET.parse(xml)
     for node in tree.iter('provider'):
+
+        # http://git.io/vGCGf
         provider = LyricsProvider(**node.attrib)
 
         for child in node.getchildren():
 
+            # http://git.io/vGCGU
             if child.tag == 'extract':
                 provider.extract_rules.extend(get_rules(child))
             elif child.tag == 'exclude':

@@ -19,6 +19,11 @@ class LyricsProvider():
         self.exclude_rules = []
 
     def build_fields(self, tags):
+        """
+        Associate fields with their values.
+
+        http://git.io/vGCsz
+        """
         rv = {
             "{Artist}": tags['artist'],
             "{ARTIST}": tags['artist'].upper(),
@@ -38,14 +43,17 @@ class LyricsProvider():
         return rv
 
     def replace_fields(self, prop, tags):
-        """ Replace build_fields keys with values in given url."""
+        """ Replace build_fields keys with values in given url. """
 
+        # TODO: A more pythonic way of doing this replacement
+        # prop.format(**build_fields(tags)) ??
         for field, value in self.build_fields(tags).items():
 
             if field not in prop:
                 continue
 
             # Apply URL character replacement to the value
+            # http://git.io/vGCGC
             for url_format in self.url_formats:
                 for char in url_format['old']:
                     if char in value:
