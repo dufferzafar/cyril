@@ -1,22 +1,9 @@
-class LyricsProvider():
+class LyricsProvider(object):
 
     """A lyrics providing website."""
 
     def __str__(self):
         return 'LyricsProvider: %s' % self.name
-
-    def __init__(self, **kwargs):
-        self.name = kwargs['name']
-        self.title = kwargs['title']
-        self.charset = kwargs['charset']
-        self.url = kwargs['url']
-
-        self.url_formats = []
-
-        self.invalid_indicators = []
-
-        self.extract_rules = []
-        self.exclude_rules = []
 
     def build_fields(self, tags):
         """
@@ -63,15 +50,3 @@ class LyricsProvider():
             prop = prop.replace(field, value)
 
         return prop
-
-    def update(self, tags):
-        self.url = self.replace_fields(self.url, tags)
-
-        def update_rules(rules):
-            for rule in rules:
-                for key, val in rule.items():
-                    rule[key] = self.replace_fields(val, tags)
-            return rules
-
-        self.exclude_rules = update_rules(self.exclude_rules)
-        self.extract_rules = update_rules(self.extract_rules)
