@@ -35,3 +35,12 @@ def parse_all():
     for xml in glob.glob('*.xml'):
         for provider in parse_xml(xml):
             yield provider
+
+if __name__ == '__main__':
+    for provider in parse_all():
+        print(provider)
+        print(provider.url)
+        print(provider.url_formats)
+        print(provider.extract_rules)
+        print(provider.exclude_rules)
+        print('\n-------------\n')
