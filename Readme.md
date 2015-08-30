@@ -3,6 +3,35 @@
 
 Fetch lyrics for MP3 files and store in it's [Unsynced Lyrics Tag](http://id3.org/id3v2.3.0/#Unsychronised_lyrics.2Ftext_transcription).
 
+## supported sites
+
+* [azlyrics.com](http://www.azlyrics.com)
+* [darklyrics.com](http://www.darklyrics.com)
+* [directlyrics.com](http://www.directlyrics.com)
+* [elyrics.net](http://www.elyrics.net)
+* [metal-archives.com](http://www.metal-archives.com)
+* [letras.terra.com.br](http://letras.terra.com.br)
+* [api.lololyrics.com](http://api.lololyrics.com)
+* [loudson.gs](http://www.loudson.gs)
+* [lyrics.com](http://www.lyrics.com)
+* [lyrics.wikia.com](http://lyrics.wikia.com)
+* [lyricsbay.com](http://www.lyricsbay.com)
+* [lyricsdownload.com](http://www.lyricsdownload.com)
+* [lyricsmania.com](http://www.lyricsmania.com)
+* [lyricsmode.com](http://www.lyricsmode.com)
+* [lyricsplugin.com](http://www.lyricsplugin.com)
+* [lyricsreg.com](http://www.lyricsreg.com)
+* [lyricstime.com](http://www.lyricstime.com)
+* [lyriki.com](http://www.lyriki.com)
+* [metrolyrics.com](http://www.metrolyrics.com)
+* [mp3lyrics.org](http://www.mp3lyrics.org)
+* [seeklyrics.com](http://www.seeklyrics.com)
+* [songlyrics.com](http://www.songlyrics.com)
+* [tekstowo.pl](http://www.tekstowo.pl)
+* [teksty.org](http://teksty.org)
+* [vagalume.com.br](http://vagalume.com.br)
+* [vagalume.com.br](http://vagalume.com.br)
+
 ## 'cyril'?
 
 ```python
