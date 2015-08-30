@@ -1,7 +1,9 @@
 
 # cyril
 
-Fetch lyrics for MP3 files and store in it's [Unsynced Lyrics Tag](http://id3.org/id3v2.3.0/#Unsychronised_lyrics.2Ftext_transcription).
+downloads and embeds lyrics into your music files.
+
+based on [Clementine's port](https://github.com/clementine-player/Clementine/tree/5cc33e6caf94184609fa09096219d6ecdb06f1c9/tools/ultimate_lyrics_parser) of the [Amarok Ultimate Lyrics Script](http://kde-apps.org/content/show.php/Ultimate+Lyrics?content=108967).
 
 ## supported sites
 
@@ -59,7 +61,11 @@ assert 'cyril' == "".join(next(islice(permutations('lyric'), 105, None)))
 
 * ensure that the code runs with both py2.7 & py3
 
+* look into how amarok does things
+`git clone --depth 1 git://anongit.kde.org/amarok.git`
 
 * look for prior-art
-    * http://api.wikia.com/wiki/LyricWiki_Apps
+    * [this guy just did a gsoc on something similar](https://www.google-melange.com/gsoc/project/details/google/gsoc2014/vedant/5639274879778816)
+    * [some more patches by the same guy](https://git.reviewboard.kde.org/users/vedanta/)
+    * [lots of similar applications](http://api.wikia.com/wiki/LyricWiki_Apps)
     * http://kde-apps.org/content/show.php?content=39724
