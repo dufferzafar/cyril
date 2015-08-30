@@ -33,6 +33,15 @@ def exclude(source, beg, end):
         return ""
 
 
+def extract_url(source, url):
+    """
+    Understand clementine's code.
+
+    http://git.io/vGcxI
+    """
+    raise NotImplementedError
+
+
 def apply_rule(func, source, rule):
     """ Apply extract/exclude on a rule. """
     if 'tag' in rule:
@@ -43,6 +52,9 @@ def apply_rule(func, source, rule):
 
     elif 'begin' in rule:
         source = func(source, rule['begin'], rule['end'])
+
+    elif 'url' in rule:
+        source = extract_url(source, rule['url'])
 
     return source
 
