@@ -55,3 +55,15 @@ class LyricsProvider():
             prop = prop.replace(field, value)
 
         return prop
+
+    def update(self, tags):
+        self.url = self.replace_fields(self.url, tags)
+
+        def update_rules(rules):
+            for rule in rules:
+                for key, val in rule.items():
+                    rule[key] = self.replace_fields(val, tags)
+            return rules
+
+        self.exclude_rules = update_rules(self.exclude_rules)
+        self.extract_rules = update_rules(self.extract_rules)
