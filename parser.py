@@ -1,15 +1,17 @@
+import glob
 import xml.etree.ElementTree as ET
 
 from provider import LyricsProvider
 
 
-def get_rules(node):
-    return [child.attrib for child in node.getchildren()
-            if child.tag == 'item']
+def parse_xml(xml):
+    """ Get providers from an xml file. """
 
+    def get_rules(node):
+        return [child.attrib for child in node.getchildren()
+                if child.tag == 'item']
 
-def get_providers(file):
-    tree = ET.parse(file)
+    tree = ET.parse(xml)
     for node in tree.iter('provider'):
         provider = LyricsProvider(**node.attrib)
 
@@ -28,3 +30,8 @@ def get_providers(file):
                 ))
 
         yield provider
+
+def parse_all():
+    for xml in glob.glob('*.xml'):
+        for provider in parse_xml(xml):
+            yield provider
