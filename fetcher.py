@@ -39,7 +39,7 @@ def extract_url(source, url):
 
     http://git.io/vGcxI
     """
-    raise NotImplementedError
+    raise NotImplementedError(extract_url.__doc__)
 
 
 def apply_rule(func, source, rule):
@@ -99,4 +99,5 @@ def fetch(provider, tags):
     if lyrics:
         return lyrics
     else:
-        raise NotImplementedError
+        raise NotImplementedError("What to do if html was found but"
+                                  "lyrics couldn't be extracted?")
