@@ -1,5 +1,4 @@
-import parser
-import fetcher
+from providers import gen_providers
 
 
 def read_tags(file):
@@ -24,19 +23,5 @@ def embed_lyrics(mp3, lyrics):
 
 if __name__ == '__main__':
 
-    # TODO: Get path to mp3 file(s) from command line.
-    # It can be a path to a single file or a folder
-    # (which will be recrusively accessed.)
-
-    for provider in parser.parse_all():
-
-        # Let's only just test one provider first!
-        if not provider.name == 'azlyrics.com':
-            continue
-
-        lyrics = fetcher.fetch(provider, read_tags(None))
-
-        # TODO: Do some html scrubbing on lyrics?
-        # like replacing <br> with \r\n etc.
-
-        print(lyrics)
+    for provider in gen_providers():
+        provider.fetch(read_tags(None))
