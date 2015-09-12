@@ -50,3 +50,6 @@ class LyricsProvider(object):
             prop = prop.replace(field, value)
 
         return prop
+
+    def fetch(tags):
+        raise NotImplementedError
