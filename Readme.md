@@ -5,6 +5,10 @@ downloads and embeds lyrics into your music files.
 
 based on [Clementine's port](https://github.com/clementine-player/Clementine/tree/5cc33e6caf94184609fa09096219d6ecdb06f1c9/tools/ultimate_lyrics_parser) of the [Amarok Ultimate Lyrics Script](http://kde-apps.org/content/show.php/Ultimate+Lyrics?content=108967).
 
+I wrote this script on a weekend when I had lots of other important stuff to do, like preparing for job interviews, completing a college project, completing an online course etc.
+
+This stupid lyrics scraping script was my escape.
+
 ## supported sites
 
 * [azlyrics.com](http://www.azlyrics.com)
