@@ -1,4 +1,5 @@
 from azlyrics import AZLyricsP
+from lyrics_wikia import LyricsWikiaP
 
 _PROVIDERS = [
     klass
