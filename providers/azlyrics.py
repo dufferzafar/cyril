@@ -20,11 +20,11 @@ class AZLyricsP(LyricsProvider):
         self.invalid_indicators = []
 
     def fetch(self, tags):
-        self.url = self.replace_fields(self.url, tags)
+        url = self.replace_fields(self.url, tags)
 
         # TODO: Encoding issues
         # http://stackoverflow.com/questions/15302125/html-encoding-and-lxml-parsing
-        dom = lxml.html.parse(self.url)
+        dom = lxml.html.parse(url)
 
         # TODO: Do we need a better method than this?
         lyrics = dom.xpath('/html/body/div[3]/div/div[2]/div[6]//text()')
