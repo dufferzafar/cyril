@@ -1,8 +1,20 @@
+def br2nl(element):
+    """Convert <br> tags to newlines."""
+
+    for br in element.xpath("//br"):
+        br.tail = "\n" + br.tail if br.tail else "\n"
+
+    return element
+
+
 class LyricsProvider(object):
 
     """A lyrics providing website."""
 
     def __str__(self):
+        return 'LyricsProvider: %s' % self.name
+
+    def __repr__(self):
         return 'LyricsProvider: %s' % self.name
 
     def build_fields(self, tags):
