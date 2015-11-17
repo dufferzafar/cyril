@@ -20,8 +20,15 @@ def embed_lyrics(mp3, lyrics):
     """ Save lyrics to the USLT ID3 tag. """
     raise NotImplementedError
 
+PRINT_FORMAT = (
+"""
+%s
+
+%s
+--------------------------
+""")
 
 if __name__ == '__main__':
 
     for provider in gen_providers():
-        provider.fetch(read_tags(None))
+        print(PRINT_FORMAT % (provider, provider.fetch(read_tags(None))))
