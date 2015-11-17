@@ -4,6 +4,7 @@ from metrolyrics import MetroLyricsP
 from directlyrics import DirectLyricsP
 from elyrics import ELyricsP
 from lyrics import LyricsP
+from songlyrics import SongLyricsP
 
 _PROVIDERS = [
     klass
