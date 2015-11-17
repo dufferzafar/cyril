@@ -3,6 +3,7 @@ from lyricswikia import LyricsWikiaP
 from metrolyrics import MetroLyricsP
 from directlyrics import DirectLyricsP
 from elyrics import ELyricsP
+from lyrics import LyricsP
 
 _PROVIDERS = [
     klass
