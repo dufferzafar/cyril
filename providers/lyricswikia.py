@@ -1,4 +1,4 @@
-from common import LyricsProvider
+from common import LyricsProvider, br2nl
 
 import lxml.html
 from lxml.html.clean import Cleaner
@@ -23,23 +23,16 @@ class LyricsWikiaP(LyricsProvider):
         self.invalid_indicators = []
 
     def fetch(self, tags):
-        self.url = self.replace_fields(self.url, tags)
+        url = self.replace_fields(self.url, tags)
 
         # TODO: Encoding issues
+        # TODO: Move this to providers.common too?
         # http://stackoverflow.com/questions/15302125/html-encoding-and-lxml-parsing
         cleaner = Cleaner()
         cleaner.javascript = True
         cleaner.style = True
-        dom = cleaner.clean_html(lxml.html.parse(self.url))
+        dom = cleaner.clean_html(lxml.html.parse(url))
 
-        lyricbox = dom.xpath(r"//div[@class='lyricbox']")[0]
-
-        # TODO: Move this to providers.commons
-        def br2nl(element):
-            for br in element.xpath("//br"):
-                br.tail = "\n" + br.tail if br.tail else "\n"
-
-        br2nl(lyricbox)
-
+        lyricbox = br2nl(dom.xpath(r"//div[@class='lyricbox']")[0])
         lyrics = "".join(lyricbox.text_content()).strip()
         return lyrics
