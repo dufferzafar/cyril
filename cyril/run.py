@@ -28,7 +28,15 @@ PRINT_FORMAT = (
 --------------------------
 """)
 
-if __name__ == '__main__':
 
+def run_all():
     for provider in gen_providers():
         print(PRINT_FORMAT % (provider, provider.fetch(read_tags(None))))
+
+def run():
+    from providers.mp3lyrics import MP3LyricsP
+    provider = MP3LyricsP()
+    print(PRINT_FORMAT % (provider, provider.fetch(read_tags(None))))
+
+if __name__ == '__main__':
+    run()
