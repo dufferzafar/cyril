@@ -18,7 +18,7 @@ class MetroLyricsP(LyricsProvider):
             {'old': r'.\'', 'new': '_'},
         ]
 
-        self.invalid_indicators = []
+        self.invalid_indicators = ["These lyrics are missing"]
 
     def fetch(self, tags):
         url = self.replace_fields(self.url, tags)

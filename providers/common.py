@@ -1,10 +1,19 @@
-def br2nl(element):
+def br2nl(elem):
     """Convert <br> tags to newlines."""
 
-    for br in element.xpath("//br"):
+    for br in elem.xpath("//br"):
         br.tail = "\n" + br.tail if br.tail else "\n"
 
-    return element
+    return elem
+
+
+def remove_all(elem, xpath):
+    """Remove all elements matching an xpath."""
+
+    for elem in elem.xpath(xpath):
+        elem.getparent().remove(elem)
+
+    return elem
 
 
 class LyricsProvider(object):

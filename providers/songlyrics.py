@@ -18,7 +18,7 @@ class SongLyricsP(LyricsProvider):
             {'old': r'\'', 'new': '_'},
         ]
 
-        self.invalid_indicators = []
+        self.invalid_indicators = ["Sorry, we have no", "This is an upcoming album and we do not have the"]
 
     def fetch(self, tags):
         url = self.replace_fields(self.url, tags)
