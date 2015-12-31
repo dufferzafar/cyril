@@ -8,8 +8,6 @@ from mutagen.id3 import USLT
 from providers import gen_providers
 from is_tagged import is_tagged
 
-PROVIDERS = gen_providers()
-
 
 def process(file, process_all=False, remove_previous=True):
     """ Fetch and Embed lyrics into a file. """
@@ -39,7 +37,8 @@ def process(file, process_all=False, remove_previous=True):
     tags['track_no'] = str(mp3.get('', '0'))
 
     # Magic happens here
-    for provider in PROVIDERS[1:]:
+    lyrics = ""
+    for name, provider in gen_providers().items():
         try:
             lyrics = provider.fetch(tags)
         except:

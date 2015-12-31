@@ -6,12 +6,16 @@ from elyrics import ELyricsP
 from lyrics import LyricsP
 from songlyrics import SongLyricsP
 
-_PROVIDERS = [
-    klass
-    for name, klass in globals().items()
-    if name.endswith('P')
-]
 
 def gen_providers():
     """ Return a list of an instance of every supported provider. """
-    return [klass() for klass in _PROVIDERS]
+
+    return {
+        name: klass()
+        for name, klass in globals().items()
+        if name.endswith('P')
+    }
+
+
+if __name__ == '__main__':
+    print(gen_providers())
