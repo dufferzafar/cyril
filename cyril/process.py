@@ -23,6 +23,12 @@ def process(file, process_all=False, remove_previous=True):
         print("Not tagged: %s " % file)
         return
 
+    # Skip files that already have embedded lyrics & user asked us not to overwrite
+    if (any(k.startswith("USLT") for k in list(mp3.keys())) and
+            not remove_previous):
+        print("Lyrics already present: %s " % file)
+        return
+
     sys.stdout.write("Processing: %s " % file)
     sys.stdout.flush()
 
