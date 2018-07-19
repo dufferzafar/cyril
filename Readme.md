@@ -15,31 +15,31 @@ This stupid lyrics scraping script was my escape.
 
 ## supported sites
 
-* [azlyrics.com](http://www.azlyrics.com)
-* ~~[darklyrics.com](http://www.darklyrics.com)~~
-* [directlyrics.com](http://www.directlyrics.com)
-* [elyrics.net](http://www.elyrics.net)
-* ~~[metal-archives.com](http://www.metal-archives.com)~~
-* ~~[letras.terra.com.br](http://letras.terra.com.br)~~
-* ~~[api.lololyrics.com](http://api.lololyrics.com)~~
-* ~~[loudson.gs](http://www.loudson.gs)~~
-* [lyrics.com](http://www.lyrics.com)
-* [lyrics.wikia.com](http://lyrics.wikia.com)
-* ~~[lyricsbay.com](http://www.lyricsbay.com)~~
-* ~~[lyricsdownload.com](http://www.lyricsdownload.com)~~
-* ~~[lyricsmania.com](http://www.lyricsmania.com)~~
-* ~~[lyricsmode.com](http://www.lyricsmode.com)~~
-* ~~[lyricsplugin.com](http://www.lyricsplugin.com)~~
-* ~~[lyricsreg.com](http://www.lyricsreg.com)~~
-* ~~[lyricstime.com](http://www.lyricstime.com)~~
-* ~~[lyriki.com](http://www.lyriki.com)~~
-* [metrolyrics.com](http://www.metrolyrics.com)
-* ~~[mp3lyrics.org](http://www.mp3lyrics.org)~~
-* ~~[seeklyrics.com](http://www.seeklyrics.com)~~
-* [songlyrics.com](http://www.songlyrics.com)
-* ~~[tekstowo.pl](http://www.tekstowo.pl)~~
-* ~~[teksty.org](http://teksty.org)~~
-* ~~[vagalume.com.br](http://vagalume.com.br)~~
+[x] [azlyrics.com](http://www.azlyrics.com)
+[ ] ~~[darklyrics.com](http://www.darklyrics.com)~~
+[x] [directlyrics.com](http://www.directlyrics.com)
+[x] [elyrics.net](http://www.elyrics.net)
+[ ] ~~[metal-archives.com](http://www.metal-archives.com)~~
+[ ] ~~[letras.terra.com.br](http://letras.terra.com.br)~~
+[ ] ~~[api.lololyrics.com](http://api.lololyrics.com)~~
+[ ] ~~[loudson.gs](http://www.loudson.gs)~~
+[x] [lyrics.com](http://www.lyrics.com)
+[x] [lyrics.wikia.com](http://lyrics.wikia.com)
+[ ] ~~[lyricsbay.com](http://www.lyricsbay.com)~~
+[ ] ~~[lyricsdownload.com](http://www.lyricsdownload.com)~~
+[ ] ~~[lyricsmania.com](http://www.lyricsmania.com)~~
+[ ] ~~[lyricsmode.com](http://www.lyricsmode.com)~~
+[ ] ~~[lyricsplugin.com](http://www.lyricsplugin.com)~~
+[ ] ~~[lyricsreg.com](http://www.lyricsreg.com)~~
+[ ] ~~[lyricstime.com](http://www.lyricstime.com)~~
+[ ] ~~[lyriki.com](http://www.lyriki.com)~~
+[x] [metrolyrics.com](http://www.metrolyrics.com)
+[ ] ~~[mp3lyrics.org](http://www.mp3lyrics.org)~~
+[ ] ~~[seeklyrics.com](http://www.seeklyrics.com)~~
+[x] [songlyrics.com](http://www.songlyrics.com)
+[ ] ~~[tekstowo.pl](http://www.tekstowo.pl)~~
+[ ] ~~[teksty.org](http://teksty.org)~~
+[ ] ~~[vagalume.com.br](http://vagalume.com.br)~~
 
 ## 'cyril'?
 
