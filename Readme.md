@@ -9,7 +9,7 @@ Based on [Clementine's port](https://github.com/clementine-player/Clementine/tre
 
 The code design was taken from `youtube-dl` - each lyrics site lives in a separate file in `cyril/providers/`. There's also some tests that would ensure that each site is being scraped correctly.
 
-I started writing this script on a weekend when I had lots of other important stuff to do - preparing for job interviews, completing a college project, finishing an online course and god knows what else. 
+I started writing this script on a weekend in August 2015 when I had lots of other important stuff to do - preparing for job interviews, completing a college project, finishing an online course and god knows what else. 
 
 This stupid lyrics scraping script was my escape.
 
